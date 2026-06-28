@@ -1,0 +1,46 @@
+.Admin {
+    flex: 0.8;
+    height: 100vh;
+    overflow: auto;
+    padding: 50px;
+    background: whitesmoke;
+    box-sizing: border-box;
+}
+
+.AdminBlock {
+    width: 100%;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.AdminCard {
+    min-width: 0;
+    padding: 20px;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+    overflow-wrap: break-word;
+    word-break: break-word;
+    overflow: auto;
+}
+/*
+@media screen and (max-width:780px) {
+    .Admin{
+        padding: 20px;
+    }
+    .AdminBlock{
+        grid-template-columns: 1fr;
+    }
+    
+}*/
+
+@media screen and (max-width: 780px) {
+    .Admin {
+        padding: 20px;
+    }
+
+    .AdminBlock {
+        grid-template-columns: 1fr;
+    }
+}
