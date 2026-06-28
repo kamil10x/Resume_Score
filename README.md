@@ -5,6 +5,14 @@
 ### An AI-powered Resume Scoring Platform that analyzes resumes against job descriptions and provides ATS-style scores with personalized feedback.
 
 
+[![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-339933?logo=nodedotjs&logoColor=white)](https://nodejs.org/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?logo=mongodb&logoColor=white)](https://www.mongodb.com/)
+[![Firebase](https://img.shields.io/badge/Firebase-FFCA28?logo=firebase&logoColor=black)](https://firebase.google.com/)
+[![Cohere AI](https://img.shields.io/badge/Cohere-AI-8A2BE2)](https://cohere.com/)
+
+</div>
+
 ---
 
 ## 🌟 Overview
@@ -30,24 +38,12 @@
 
 ## 🛠️ Tech Stack
 
-<table>
-  <tr>
-    <td><strong>Frontend</strong></td>
-    <td>React.js, React Router, Axios, Material UI, CSS Modules, Vite</td>
-  </tr>
-  <tr>
-    <td><strong>Backend</strong></td>
-    <td>Node.js, Express.js, Multer, PDF-Parse, Cohere AI API</td>
-  </tr>
-  <tr>
-    <td><strong>Database</strong></td>
-    <td>MongoDB Atlas, Mongoose</td>
-  </tr>
-  <tr>
-    <td><strong>Auth</strong></td>
-    <td>Firebase Google Authentication</td>
-  </tr>
-</table>
+| Layer | Technologies |
+|---|---|
+| **Frontend** | React.js, React Router, Axios, Material UI, CSS Modules, Vite |
+| **Backend** | Node.js, Express.js, Multer, PDF-Parse, Cohere AI API |
+| **Database** | MongoDB Atlas, Mongoose |
+| **Auth** | Firebase Google Authentication |
 
 ---
 
@@ -55,20 +51,19 @@
 
 ```
 Resume_Score/
-│
 ├── Frontend/
-│   ├── src/               # React components, pages, hooks
-│   ├── public/            # Static assets
+│   ├── src/                # React components, pages, hooks
+│   ├── public/             # Static assets
 │   └── package.json
 │
 ├── Backend/
-│   ├── Controllers/       # Route handler logic
-│   ├── Models/            # Mongoose schemas
-│   ├── Routes/            # Express route definitions
-│   ├── uploads/           # Temporary PDF storage
-│   ├── utils/             # Helper functions
-│   ├── conn.js            # MongoDB connection
-│   └── server.js          # Entry point
+│   ├── Controllers/        # Route handler logic
+│   ├── Models/             # Mongoose schemas
+│   ├── Routes/             # Express route definitions
+│   ├── uploads/            # Temporary PDF storage
+│   ├── utils/              # Helper functions
+│   ├── conn.js             # MongoDB connection
+│   └── server.js           # Entry point
 │
 └── README.md
 ```
@@ -113,12 +108,12 @@ COHERE_API_KEY=your_cohere_api_key
 ### Frontend — create `Frontend/.env`
 
 ```env
-VITE_FIREBASE_API_KEY=
-VITE_FIREBASE_AUTH_DOMAIN=
-VITE_FIREBASE_PROJECT_ID=
-VITE_FIREBASE_STORAGE_BUCKET=
-VITE_FIREBASE_MESSAGING_SENDER_ID=
-VITE_FIREBASE_APP_ID=
+VITE_FIREBASE_API_KEY=your_value
+VITE_FIREBASE_AUTH_DOMAIN=your_value
+VITE_FIREBASE_PROJECT_ID=your_value
+VITE_FIREBASE_STORAGE_BUCKET=your_value
+VITE_FIREBASE_MESSAGING_SENDER_ID=your_value
+VITE_FIREBASE_APP_ID=your_value
 ```
 
 > ⚠️ Never commit `.env` files to version control. Add them to `.gitignore`.
@@ -141,10 +136,10 @@ cd Frontend
 npm run dev
 ```
 
-| Service  | URL |
-|----------|-----|
+| Service | URL |
+|---|---|
 | Frontend | http://localhost:5173 |
-| Backend  | http://localhost:5000 |
+| Backend | http://localhost:5000 |
 
 ---
 
@@ -154,8 +149,9 @@ npm run dev
 ```http
 POST /resume/addResume
 ```
+
 | Field | Type | Description |
-|-------|------|-------------|
+|---|---|---|
 | `resume` | File | PDF resume file |
 | `job_desc` | String | Target job description |
 | `user` | String | Authenticated user ID |
@@ -176,19 +172,19 @@ GET /resume/get/admin
 
 ```
 1. 🔐  User signs in with Google
-         ↓
+            ↓
 2. 📄  Uploads a PDF resume
-         ↓
+            ↓
 3. 📝  Enters the job description
-         ↓
-4. ⚙️   Backend extracts text from PDF
-         ↓
+            ↓
+4. ⚙️  Backend extracts text from PDF
+            ↓
 5. 🤖  Cohere AI analyzes resume vs. job description
-         ↓
+            ↓
 6. 📊  ATS Match Score (0–100) is generated
-         ↓
+            ↓
 7. 💾  Score & feedback saved to MongoDB
-         ↓
+            ↓
 8. 📋  User views current & past analyses
 ```
 
@@ -228,7 +224,6 @@ git push origin feature/your-feature-name
 Please make sure your code follows the existing style and includes relevant comments.
 
 ---
-
 
 
 ## 👨‍💻 Author
